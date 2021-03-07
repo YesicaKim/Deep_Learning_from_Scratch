@@ -123,10 +123,12 @@ def as_array(x):
 
 class Function:
     def __call__(self, *inputs):
-        inputs = [as_variable(x) for x in inputs]
+        inputs = [
+            (x) for x in inputs]
 
         xs = [x.data for x in inputs]
         ys = self.forward(*xs)
+        
         if not isinstance(ys, tuple):
             ys = (ys,)
         outputs = [Variable(as_array(y)) for y in ys]

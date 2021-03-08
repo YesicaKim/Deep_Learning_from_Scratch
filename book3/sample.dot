@@ -1,4 +1,5 @@
 digraph g {
-1 x
-2 y
+1 [label="x", color=orange, style=filled]
+2 [label="y", color=orange, style=filled]
+3 [label="EXP", color=lightblue, style=filled, shape=box]
 }
